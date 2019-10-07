@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    public Button newGameButton;
-    public string newGameSceneName;
-    public bool isPlay;
+    bool isMute;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,26 +22,39 @@ public class Menu : MonoBehaviour
 
     }
 
-    void OnMouseUp()
-    {
-        /*if (isQuit)
-        {
-            //Application.Quit();
-        }*/
-        if (isPlay)
-        {
-            NewGame();
-        }
-    }
-
     public void NewGame()
     {
-        SceneManager.LoadScene(newGameSceneName);
+        Debug.Log("SceneName to load: Level 1");
+        SceneManager.LoadScene("Level1");
     }
 
     public void QuitGame()
     {
         Debug.Log("has quit game");
         Application.Quit();
+    }
+
+    public void Mute()
+    {
+        isMute = !isMute;
+        AudioListener.volume = isMute ? 0 : 1;
+    }
+
+    public void Level1()
+    {
+        Debug.Log("SceneName to load: Level 1");
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void Level2()
+    {
+        Debug.Log("SceneName to load: Level 2");
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void MainMenu()
+    {
+        Debug.Log("SceneName to load: MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }
