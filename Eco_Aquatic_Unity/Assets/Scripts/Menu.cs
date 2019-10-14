@@ -8,12 +8,14 @@ public class Menu : MonoBehaviour
 {
     bool isMute;
 
+    bool isPaused = false;
 
+    public GameObject[] pauseObjects;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pauseObjects = GameObject.FindGameObjectsWithTag("Pause");
     }
 
     // Update is called once per frame
@@ -56,5 +58,60 @@ public class Menu : MonoBehaviour
     {
         Debug.Log("SceneName to load: MainMenu");
         SceneManager.LoadScene("MainMenu");
+    }
+
+    void OnGUI()
+    {
+        if (isPaused)
+            GUI.Label(new Rect(100, 100, 50, 30), "Game paused");
+    }
+
+    /*void OnApplicationFocus(bool hasFocus)
+    {
+        isPaused = !hasFocus;
+    }
+
+    public void OnApplicationPause(bool pauseStatus)
+    {
+        isPaused = pauseStatus;
+    }*/
+
+    public void Pause()
+    {
+        if (Time.timeScale == 1)
+        {
+            isPaused = true;
+            Time.timeScale = 0;
+            showPaused();
+        }
+        else if (Time.timeScale == 0)
+        {
+            isPaused = false;
+            Time.timeScale = 1; //Resume Game..
+            showPaused();
+        }
+    }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
+    }
+
+    public void showPaused()
+    {
+        if (isPaused == true)
+        {
+            foreach (GameObject g in pauseObjects)
+            {
+                g.SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (GameObject g in pauseObjects)
+            {
+                g.SetActive(false);
+            }
+        }
     }
 }
