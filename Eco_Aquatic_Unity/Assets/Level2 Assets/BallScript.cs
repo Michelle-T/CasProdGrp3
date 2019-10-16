@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour
 {
-    public float ballInitialVelocity = 600f;
-
+    public float ballInitialVelocity = 1f;
+    public float maxSpeed = 2f;
 
     private Rigidbody2D rb;
     private bool ballInPlay;
@@ -18,17 +18,24 @@ public class BallScript : MonoBehaviour
 
     }
 
+    //Start Ball
     void Update()
     {
         if (Input.GetMouseButtonDown(1) && ballInPlay == false)
         {
-            transform.parent = null;
+            transform.parent = null; // release ball from turtle
             ballInPlay = true;
-            rb.isKinematic = false;
-            rb.AddForce(new Vector3(ballInitialVelocity, ballInitialVelocity, 0));
+            rb.isKinematic = false; // change body type
+            rb.AddForce(new Vector3(0, ballInitialVelocity, 0)); //launch ball
+        }
+
+        if (GetComponent<Rigidbody2D>().velocity.magnitude > maxSpeed)
+        {
+            GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity.normalized * maxSpeed;
         }
     }
 
+    //Trash Breaking
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Trash")

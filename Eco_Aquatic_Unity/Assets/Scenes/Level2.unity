@@ -1667,6 +1667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballInitialVelocity: 1.5
+  maxSpeed: 500
 --- !u!1 &899508583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,6 +2497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc71c1daf3d3d7c4da061bb72e7e407e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 1000
 --- !u!212 &1155132542
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2533,7 +2535,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8630a24fcdfeae142a87ac20a3a8d897, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f7be205ffb57db4f9e7286faf7fac6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2573,7 +2575,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.8}
   m_Direction: 1
 --- !u!114 &1155132545
 MonoBehaviour:
@@ -2587,6 +2589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4934eb52deae45419b9ff334eea13e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 1000
 --- !u!1 &1261023116
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class DragMouseMove : MonoBehaviour {
     private Vector3 mousePosition;
     private Rigidbody2D rb;
     private Vector2 direction;
-    private float moveSpeed = 500f;
+    public float moveSpeed = 500f;
 
 	// Use this for initialization
 	void Start () {
