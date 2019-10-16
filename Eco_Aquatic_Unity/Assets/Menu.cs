@@ -13,18 +13,29 @@ public class Menu : MonoBehaviour
 
     bool isPaused = false;
 
-    public GameObject[] pauseObjects;
+    public GameObject[] pauseObjectsActiveiness;
 
     // Start is called before the first frame update
     void Start()
     {
-        pauseObjects = GameObject.FindGameObjectsWithTag("Pause");
+        pauseObjectsActiveiness = GameObject.FindGameObjectsWithTag("Pause");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Time.timeScale == 1 && Input.GetKeyDown("space"))
+        {
+            isPaused = true;
+            Time.timeScale = 0;
+            showPaused();
+        }
+        else if (Time.timeScale == 0 && Input.GetKeyDown("space"))
+        {
+            isPaused = false;
+            Time.timeScale = 1; //Resume Game..
+            showPaused();
+        }
     }
 
     public void NewGame()
@@ -104,14 +115,14 @@ public class Menu : MonoBehaviour
     {
         if (isPaused == true)
         {
-            foreach (GameObject g in pauseObjects)
+            foreach (GameObject g in pauseObjectsActiveiness)
             {
                 g.SetActive(true);
             }
         }
         else
         {
-            foreach (GameObject g in pauseObjects)
+            foreach (GameObject g in pauseObjectsActiveiness)
             {
                 g.SetActive(false);
             }
