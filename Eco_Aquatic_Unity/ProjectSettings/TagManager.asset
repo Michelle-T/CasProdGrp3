@@ -4,14 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pause
   - Trash
-<<<<<<< HEAD
   - Ball
-=======
   - Bubble
   - Fish
->>>>>>> cf9d6edc85be60bf419e929b6033ef7591a51667
   layers:
   - Default
   - TransparentFX
@@ -21,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - Game
+  - 
   - 
   - 
   - 
@@ -48,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: GameObjects
+    uniqueID: 2023098757
     locked: 0
