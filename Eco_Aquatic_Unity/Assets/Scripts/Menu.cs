@@ -8,6 +8,9 @@ public class Menu : MonoBehaviour
 {
     bool isMute;
 
+    public GameObject Mutet;
+    public GameObject Unmute;
+
     bool isPaused = false;
 
     public GameObject[] pauseObjects;
@@ -112,6 +115,20 @@ public class Menu : MonoBehaviour
             {
                 g.SetActive(false);
             }
+        }
+    }
+
+    public void MuteText()
+    {
+        if (isMute == true)
+        {
+            Mutet.SetActive(false);
+            Unmute.SetActive(true);
+        }
+        else
+        {
+            Mutet.SetActive(true);
+            Unmute.SetActive(false);
         }
     }
 }
