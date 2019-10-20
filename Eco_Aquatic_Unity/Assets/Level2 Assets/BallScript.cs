@@ -10,6 +10,9 @@ public class BallScript : MonoBehaviour
     private Rigidbody2D rb;
     private bool ballInPlay;
 
+    private const float doubleClickTime = .2f;
+    private float lastClickTime;
+
     void Awake()
     {
 
@@ -21,12 +24,19 @@ public class BallScript : MonoBehaviour
     //Start Ball
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) && ballInPlay == false)
+        if (Input.GetMouseButtonDown(0) && ballInPlay == false)
         {
-            transform.parent = null; // release ball from turtle
-            ballInPlay = true;
-            rb.isKinematic = false; // change body type
-            rb.AddForce(new Vector3(0, ballInitialVelocity, 0)); //launch ball
+            float timeSinceLastClick = Time.time - lastClickTime;
+
+            if (timeSinceLastClick <= doubleClickTime)
+            {
+                transform.parent = null; // release ball from turtle
+                ballInPlay = true;
+                rb.isKinematic = false; // change body type
+                rb.AddForce(new Vector3(0, ballInitialVelocity, 0)); //launch ball
+            }
+
+            lastClickTime = Time.time;
         }
 
         if (GetComponent<Rigidbody2D>().velocity.magnitude > maxSpeed)

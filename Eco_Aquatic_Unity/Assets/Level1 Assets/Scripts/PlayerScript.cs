@@ -12,6 +12,9 @@ public class PlayerScript : MonoBehaviour
     public Text scoreText;
     public int score;
 
+    private const float doubleClickTime = .2f;
+    private float lastClickTime;
+
     void Start()
     {
         score = 0;
@@ -21,11 +24,18 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
      
-        if (canShoot && Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0) && canShoot)
         {
-            canShoot = false;
-            Instantiate(bubble, transform.position, transform.rotation);
-            StartCoroutine(NoFire());
+            float timeSinceLastClick = Time.time - lastClickTime;
+
+            if (timeSinceLastClick <= doubleClickTime)
+            {
+                canShoot = false;
+                Instantiate(bubble, transform.position, transform.rotation);
+                StartCoroutine(NoFire());
+            }
+
+            lastClickTime = Time.time;
         }
 
         scoreText.text = "Score: " + score;

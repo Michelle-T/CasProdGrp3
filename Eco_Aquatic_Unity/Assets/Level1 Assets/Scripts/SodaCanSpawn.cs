@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class TrashSpawn : MonoBehaviour
+public class SodaCanSpawn : MonoBehaviour
 {
     public GameObject trash;
     public float spawnTime = 2f;

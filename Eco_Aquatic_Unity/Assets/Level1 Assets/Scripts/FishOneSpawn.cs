@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class FishSpawn : MonoBehaviour
+public class FishOneSpawn : MonoBehaviour
 {
     public GameObject fish;
     public float spawnTime = 2f;
