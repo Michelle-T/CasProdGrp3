@@ -28,13 +28,13 @@ public class Menu : MonoBehaviour
         {
             isPaused = true;
             Time.timeScale = 0;
-            showPaused();
+            ShowPaused();
         }
         else if (Time.timeScale == 0 && Input.GetKeyDown("space"))
         {
             isPaused = false;
             Time.timeScale = 1; //Resume Game..
-            showPaused();
+            ShowPaused();
         }
     }
 
@@ -96,13 +96,13 @@ public class Menu : MonoBehaviour
         {
             isPaused = true;
             Time.timeScale = 0;
-            showPaused();
+            ShowPaused();
         }
         else if (Time.timeScale == 0)
         {
             isPaused = false;
             Time.timeScale = 1; //Resume Game..
-            showPaused();
+            ShowPaused();
         }
     }
 
@@ -111,7 +111,7 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
     }
 
-    public void showPaused()
+    public void ShowPaused()
     {
         if (isPaused == true)
         {
