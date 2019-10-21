@@ -1667,6 +1667,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballInitialVelocity: 1.5
   maxSpeed: 500
+  Ball: {fileID: 858633709}
+  Player: {fileID: 1155132543}
 --- !u!1 &899508583
 GameObject:
   m_ObjectHideFlags: 0

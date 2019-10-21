@@ -10,15 +10,17 @@ public class BallScript : MonoBehaviour
     private Rigidbody2D rb;
     private bool ballInPlay;
 
+    //DoubleClickVariables
     private const float doubleClickTime = .2f;
     private float lastClickTime;
 
-    void Awake()
-    {
+    public Transform Ball;
+    public Transform Player;
 
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         ballInPlay = false;
-
     }
 
     //Start Ball
@@ -39,9 +41,9 @@ public class BallScript : MonoBehaviour
             lastClickTime = Time.time;
         }
 
-        if (GetComponent<Rigidbody2D>().velocity.magnitude > maxSpeed)
+        if (rb.velocity.magnitude > maxSpeed)
         {
-            GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity.normalized * maxSpeed;
+            rb.velocity = rb.velocity.normalized * maxSpeed;
         }
     }
 
@@ -52,5 +54,15 @@ public class BallScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+    }
+
+    //Reset Ball
+    void OnBecameInvisible()
+    {
+        Ball.position = Player.position;
+        Ball.transform.parent = Player.transform;
+        rb.isKinematic = true;
+        ballInPlay = false;
+        rb.velocity = rb.velocity * 0;
     }
 }
