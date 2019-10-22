@@ -59,10 +59,8 @@ public class BallScript : MonoBehaviour
     //Reset Ball
     void OnBecameInvisible()
     {
-        Ball.position = Player.position;
+        Instantiate(Ball, transform.position, transform.rotation);
         Ball.transform.parent = Player.transform;
-        rb.isKinematic = true;
         ballInPlay = false;
-        rb.velocity = rb.velocity * 0;
     }
 }

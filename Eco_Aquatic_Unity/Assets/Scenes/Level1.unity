@@ -1118,7 +1118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubble: {fileID: 1374535130}
-  delayTime: 0.5
   scoreText: {fileID: 690900740}
   score: 0
 --- !u!114 &1155132545
