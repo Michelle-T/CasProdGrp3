@@ -13,6 +13,8 @@ public class PlayerScript : MonoBehaviour
     private const float doubleClickTime = .2f;
     private float lastClickTime;
 
+    public float timeLeft = 10.0f;
+
     void Start()
     {
         score = 0;
@@ -35,9 +37,16 @@ public class PlayerScript : MonoBehaviour
         }
 
         scoreText.text = "Score: " + score;
+
+        //Timer
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0)
+        {
+            //Game Over
+        }
     }
 
-    public void AddScore ()
+    public void AddScore()
     {
         score = score += 1;
     }

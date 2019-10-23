@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class SodaCanSpawn : MonoBehaviour
+public class RingsSpawn : MonoBehaviour
 {
     public GameObject trash;
     public float spawnTime = 2f;
@@ -18,7 +18,6 @@ public class SodaCanSpawn : MonoBehaviour
             timer = 0;
         }
     }
-
     public void SpawnRandom()
     {
 
