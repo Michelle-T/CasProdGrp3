@@ -1399,7 +1399,7 @@ MonoBehaviour:
   bubble: {fileID: 1374535130}
   scoreText: {fileID: 690900740}
   score: 0
-  timeLeft: 30
+  timeLeft: 10
 --- !u!114 &1155132545
 MonoBehaviour:
   m_ObjectHideFlags: 0

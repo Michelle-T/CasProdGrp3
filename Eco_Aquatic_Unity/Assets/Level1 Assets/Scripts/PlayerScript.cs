@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -39,10 +40,16 @@ public class PlayerScript : MonoBehaviour
         scoreText.text = "Score: " + score;
 
         //Timer
+        var timeOut = false;
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
-            //Game Over
+            if(timeOut == false)
+            {
+                SceneManager.UnloadScene("Level1");
+                SceneManager.LoadScene("Level2", LoadSceneMode.Additive);
+                timeOut = true;
+            }          
         }
     }
 
