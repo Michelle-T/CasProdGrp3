@@ -11,6 +11,8 @@ public class PlayerScript : MonoBehaviour
     public Text scoreText;
     public int score;
 
+    public Text timerText;
+
     private const float doubleClickTime = .2f;
     private float lastClickTime;
 
@@ -51,6 +53,8 @@ public class PlayerScript : MonoBehaviour
                 timeOut = true;
             }          
         }
+
+        timerText.text = "Time: " + timeLeft;
     }
 
     public void AddScore()
