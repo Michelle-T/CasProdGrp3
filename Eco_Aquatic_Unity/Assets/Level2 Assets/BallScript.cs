@@ -70,5 +70,6 @@ public class BallScript : MonoBehaviour
         Ball.transform.parent = Player.transform;
         rb.isKinematic = true;
         ballInPlay = false;
+        rb.velocity = rb.velocity - rb.velocity;
     }
 }
