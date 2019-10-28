@@ -575,9 +575,6 @@ AudioSource:
     m_RotationOrder: 4
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 8b426c6... Cody Upload
 =======
 >>>>>>> parent of 8b426c6... Cody Upload
 --- !u!1 &672228148
@@ -631,11 +628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-=======
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> parent of 8b426c6... Cody Upload
 =======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 >>>>>>> parent of 8b426c6... Cody Upload
@@ -663,11 +656,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 672228148}
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> 8b426c6bd61eb76d0a7de53692347c968020b02f
-=======
->>>>>>> parent of 8b426c6... Cody Upload
 =======
 >>>>>>> parent of 8b426c6... Cody Upload
 --- !u!1 &684505181
