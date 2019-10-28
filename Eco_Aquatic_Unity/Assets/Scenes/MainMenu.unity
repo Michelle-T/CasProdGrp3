@@ -636,6 +636,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Color: {r: 1, g: 1, b: 1, a: 0}
 =======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -646,6 +647,9 @@ MonoBehaviour:
 =======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 >>>>>>> parent of 8b426c6... Cody Upload
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> parent of 7933b3c... Updated Menus
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

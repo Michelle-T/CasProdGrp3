@@ -108,8 +108,7 @@ public class Menu : MonoBehaviour
 
     public void Reload()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1;
+        SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
     }
 
     public void ShowPaused()
