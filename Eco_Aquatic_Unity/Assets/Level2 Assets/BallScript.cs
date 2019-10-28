@@ -17,16 +17,10 @@ public class BallScript : MonoBehaviour
     public Transform Ball;
     public Transform Player;
 
-    Vector3 originalPos;
-    Vector3 originalPosPlayer;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         ballInPlay = false;
-
-        originalPos = gameObject.transform.position;
-        originalPosPlayer = GameObject.Find("Player").transform.position;
     }
 
     //Start Ball
@@ -65,11 +59,8 @@ public class BallScript : MonoBehaviour
     //Reset Ball
     void OnBecameInvisible()
     {
-        gameObject.transform.position = originalPos;
-        GameObject.Find("Player").transform.position = originalPosPlayer;
+        Instantiate(Ball, transform.position, transform.rotation);
         Ball.transform.parent = Player.transform;
-        rb.isKinematic = true;
         ballInPlay = false;
-        rb.velocity = rb.velocity - rb.velocity;
     }
 }
