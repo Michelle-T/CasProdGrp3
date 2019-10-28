@@ -18,13 +18,13 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //pauseObjectsActiveiness = GameObject.FindGameObjectsWithTag("Pause");
+        pauseObjectsActiveiness = GameObject.FindGameObjectsWithTag("Pause");
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Time.timeScale == 1 && Input.GetKeyDown("space"))
+        if (Time.timeScale == 1 && Input.GetKeyDown("space"))
         {
             isPaused = true;
             Time.timeScale = 0;
@@ -35,7 +35,7 @@ public class Menu : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1; //Resume Game..
             ShowPaused();
-        }*/
+        }
     }
 
     public void NewGame()
