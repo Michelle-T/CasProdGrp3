@@ -7,6 +7,11 @@ public class BubbleScript : MonoBehaviour
 
     public float force;
 
+    private AudioSource audioSource;
+    private SpriteRenderer rend;
+    private PolygonCollider2D poly;
+    private CircleCollider2D poly2;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,12 +22,31 @@ public class BubbleScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Trash")
         {
-            Destroy(gameObject);
+            audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
+            rend = GetComponent<SpriteRenderer>(); // gets sprite renderer
+
+            rend.enabled = false; // sets to false if hit.
+
+            poly2 = GetComponent<CircleCollider2D>();
+
+            poly2.enabled = false;
+            Destroy(gameObject, 3f);
         }
 
         if (other.gameObject.tag == "Fish")
         {
-            Destroy(gameObject);
+            audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
+            rend = GetComponent<SpriteRenderer>(); // gets sprite renderer
+
+            rend.enabled = false; // sets to false if hit.
+
+            poly = GetComponent<PolygonCollider2D>();
+
+            poly.enabled = false;
+
+            Destroy(gameObject, 3f);
         }
     }
     void OnBecameInvisible()
