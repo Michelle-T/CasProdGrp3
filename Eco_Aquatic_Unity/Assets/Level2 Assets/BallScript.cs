@@ -14,11 +14,14 @@ public class BallScript : MonoBehaviour
     private const float doubleClickTime = .2f;
     private float lastClickTime;
 
+    //Position variables
     public Transform Ball;
     public Transform Player;
 
     Vector3 originalPos;
     Vector3 originalPosPlayer;
+
+    public int lives = 3;
 
     void Start()
     {
@@ -47,9 +50,16 @@ public class BallScript : MonoBehaviour
             lastClickTime = Time.time;
         }
 
+        //Control Top Speed
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
+        }
+
+        //Lose
+        if(lives == 0)
+        {
+
         }
     }
 
@@ -62,7 +72,7 @@ public class BallScript : MonoBehaviour
         }
     }
 
-    //Reset Ball
+    //Reset Ball and Lose Life
     void OnBecameInvisible()
     {
         gameObject.transform.position = originalPos;
@@ -71,5 +81,6 @@ public class BallScript : MonoBehaviour
         rb.isKinematic = true;
         ballInPlay = false;
         rb.velocity = rb.velocity - rb.velocity;
+        lives--;
     }
 }

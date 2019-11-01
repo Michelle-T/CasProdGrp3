@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DestroyScript : MonoBehaviour
 {
+    public GameObject sound;
+
     void OnBecameInvisible()
     {
         Destroy(gameObject);
@@ -15,7 +17,7 @@ public class DestroyScript : MonoBehaviour
             GameObject player = GameObject.Find("Player");
             PlayerScript playerScript = player.GetComponent<PlayerScript>();
             playerScript.AddScore();
-
+            Instantiate(sound);
             Destroy(gameObject);
         }
     }
