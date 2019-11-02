@@ -24,18 +24,7 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Time.timeScale == 1 && Input.GetKeyDown("space"))
-        {
-            isPaused = true;
-            Time.timeScale = 0;
-            ShowPaused();
-        }
-        else if (Time.timeScale == 0 && Input.GetKeyDown("space"))
-        {
-            isPaused = false;
-            Time.timeScale = 1; //Resume Game..
-            ShowPaused();
-        }*/
+        
     }
 
     public void NewGame()
@@ -71,10 +60,12 @@ public class Menu : MonoBehaviour
     public void MainMenu()
     {
         Debug.Log("SceneName to load: MainMenu");
+        Time.timeScale = 1; //Resume Game..
+        AudioListener.volume = 1;
         SceneManager.LoadScene("MainMenu");
     }
 
-    void OnGUI()
+    /*void OnGUI()
     {
         if (isPaused)
             GUI.Label(new Rect(100, 100, 50, 30), "Game paused");
@@ -108,7 +99,7 @@ public class Menu : MonoBehaviour
 
     public void Reload()
     {
-        SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
+        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
     }
 
     public void ShowPaused()
