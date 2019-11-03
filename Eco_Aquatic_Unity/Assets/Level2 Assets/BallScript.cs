@@ -81,10 +81,10 @@ public class BallScript : MonoBehaviour
         }
     }
 
-    //Trash Breaking
+    //Oil Breaking
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Trash")
+        if (collision.gameObject.tag == "Trash") //Oil is tagged trash ¯\_(ツ)_/¯
         {
             Destroy(collision.gameObject);
         }
