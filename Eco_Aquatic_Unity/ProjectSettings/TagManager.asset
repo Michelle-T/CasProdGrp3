@@ -49,3 +49,6 @@ TagManager:
   - name: GameObjects
     uniqueID: 2023098757
     locked: 0
+  - name: Oil
+    uniqueID: 1789115437
+    locked: 0
