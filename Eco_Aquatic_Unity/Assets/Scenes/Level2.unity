@@ -3845,6 +3845,7 @@ MonoBehaviour:
   - {fileID: 488103137}
   - {fileID: 1765625702}
   - {fileID: 1183002879}
+  impact: {fileID: 8300000, guid: cbbd1f8b723e743a5b8d40b46d57136c, type: 3}
 --- !u!82 &858633714
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3855,7 +3856,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: db42a0f26aeaa0e449bd950dee34e6de, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cbbd1f8b723e743a5b8d40b46d57136c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.711
   m_Pitch: 1

@@ -27,6 +27,9 @@ public class BallScript : MonoBehaviour
     public GameObject[] winObjectsActiveness;
     public GameObject[] loseObjectsActiveness;
 
+    AudioSource audioData;
+    public AudioClip impact;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +37,8 @@ public class BallScript : MonoBehaviour
 
         originalPos = gameObject.transform.position;
         originalPosPlayer = GameObject.Find("Player").transform.position;
+
+        audioData = GetComponent<AudioSource>();
     }
 
     //Start Ball
@@ -87,6 +92,12 @@ public class BallScript : MonoBehaviour
         if (collision.gameObject.tag == "Trash") //Oil is tagged trash ¯\_(ツ)_/¯
         {
             Destroy(collision.gameObject);
+            audioData.PlayOneShot(impact, 0.7F);
+        }
+
+        if (collision.gameObject.tag == "Fish") //Pelican is tagged fish ¯\_(ツ)_/¯
+        {
+            audioData.PlayOneShot(impact, 0.7F);
         }
     }
 
