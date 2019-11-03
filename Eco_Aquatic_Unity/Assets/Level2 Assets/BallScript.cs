@@ -61,12 +61,6 @@ public class BallScript : MonoBehaviour
         {
 
         }
-
-        //Win
-        if (GameObject.FindGameObjectsWithTag("Trash").Length <= 0)
-        {
-            
-        }
     }
 
     //Trash Breaking
