@@ -9,6 +9,9 @@ public class DragFingerMove : MonoBehaviour
     private Vector3 direction;
     public float moveSpeed = 500f;
 
+    public GameObject Player;
+    private bool facingRight = true;
+
     // Use this for initialization
     private void Start()
     {
@@ -30,5 +33,26 @@ public class DragFingerMove : MonoBehaviour
                 rb.velocity = Vector2.zero;
         }
     }
+
+    /*void FixedUpdate()
+    {
+        if (facingRight == false && Input.touchCount < 0)
+        {
+            Flip();
+        }
+        else if (facingRight == true && Input.touchCount < 0)
+        {
+            Flip();
+        }
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector2 Scaler = transform.localScale;
+        Scaler.x = Scaler.x * -1;
+        transform.localScale = Scaler;
+    }*/
+
 }
 

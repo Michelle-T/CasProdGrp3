@@ -23,6 +23,10 @@ public class BallScript : MonoBehaviour
 
     public int lives = 3;
 
+    //Win Objects
+    public GameObject[] winObjectsActiveness;
+    public GameObject[] loseObjectsActiveness;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -59,7 +63,21 @@ public class BallScript : MonoBehaviour
         //Lose
         if(lives == 0)
         {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            foreach (GameObject g in loseObjectsActiveness)
+            {
+                g.SetActive(true);
+            }
+        }
 
+        //Win
+        if (GameObject.FindGameObjectsWithTag("Trash").Length <= 0)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            foreach (GameObject g in winObjectsActiveness)
+            {
+                g.SetActive(true);
+            }
         }
     }
 

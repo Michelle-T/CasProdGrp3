@@ -9,8 +9,11 @@ public class DragMouseMove : MonoBehaviour {
     private Vector2 direction;
     public float moveSpeed = 500f;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject Player;
+    private bool facingRight = true;
+
+    // Use this for initialization
+    void Start () {
         rb = GetComponent<Rigidbody2D>();
 	}
 	
@@ -25,5 +28,25 @@ public class DragMouseMove : MonoBehaviour {
         else {
             rb.velocity = Vector2.zero;
         }
+    }
+
+    void FixedUpdate()
+    {
+        if (facingRight == false && Player.transform.position.x < 175)
+        {
+            Flip();
+        }
+        else if (facingRight == true && Player.transform.position.x > 175)
+        {
+            Flip();
+        }
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector2 Scaler = transform.localScale;
+        Scaler.x = Scaler.x * -1;
+        transform.localScale = Scaler;
     }
 }

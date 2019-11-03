@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
 
     bool isPaused = false;
 
-    public GameObject[] pauseObjectsActiveiness;
+    public GameObject[] pauseObjectsActiveness;
 
     // Start is called before the first frame update
     void Start()
@@ -106,14 +106,14 @@ public class Menu : MonoBehaviour
     {
         if (isPaused == true)
         {
-            foreach (GameObject g in pauseObjectsActiveiness)
+            foreach (GameObject g in pauseObjectsActiveness)
             {
                 g.SetActive(true);
             }
         }
         else
         {
-            foreach (GameObject g in pauseObjectsActiveiness)
+            foreach (GameObject g in pauseObjectsActiveness)
             {
                 g.SetActive(false);
             }
