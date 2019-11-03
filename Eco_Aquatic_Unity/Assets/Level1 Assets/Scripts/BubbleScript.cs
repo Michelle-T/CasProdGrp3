@@ -9,7 +9,7 @@ public class BubbleScript : MonoBehaviour
 
     private AudioSource audioSource;
     private SpriteRenderer rend;
-    private PolygonCollider2D poly;
+    private CircleCollider2D poly;
     private CircleCollider2D poly2;
 
     void Start()
@@ -42,7 +42,7 @@ public class BubbleScript : MonoBehaviour
 
             rend.enabled = false; // sets to false if hit.
 
-            poly = GetComponent<PolygonCollider2D>();
+            poly = GetComponent<CircleCollider2D>();
 
             poly.enabled = false;
 

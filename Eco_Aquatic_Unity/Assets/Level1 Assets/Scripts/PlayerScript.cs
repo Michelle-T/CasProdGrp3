@@ -48,8 +48,8 @@ public class PlayerScript : MonoBehaviour
         {
             if(timeOut == false)
             {
-                SceneManager.UnloadScene("Level1");
-                SceneManager.LoadScene("Level2", LoadSceneMode.Additive);
+                //SceneManager.UnloadScene("Level1");
+                SceneManager.LoadScene("Level2");
                 timeOut = true;
             }          
         }
