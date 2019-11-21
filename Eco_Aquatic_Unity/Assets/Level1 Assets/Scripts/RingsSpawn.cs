@@ -21,7 +21,7 @@ public class RingsSpawn : MonoBehaviour
     public void SpawnRandom()
     {
 
-        Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(600, Screen.height), Camera.main.farClipPlane / 2));
+        Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(Screen.height, Screen.height), Camera.main.farClipPlane / 2));
         Instantiate(trash, screenPosition, Quaternion.Euler(0, 0, Random.Range(0, 360)));
 
     }

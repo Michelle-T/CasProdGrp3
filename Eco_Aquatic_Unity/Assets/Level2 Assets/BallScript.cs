@@ -6,6 +6,7 @@ public class BallScript : MonoBehaviour
 {
     public float ballInitialVelocity = 1f;
     public float maxSpeed = 2f;
+    public float minSpeed = 2f;
 
     private Rigidbody2D rb;
     private bool ballInPlay;
@@ -65,8 +66,14 @@ public class BallScript : MonoBehaviour
             rb.velocity = rb.velocity.normalized * maxSpeed;
         }
 
+        //Control Bottom Speed
+        if (rb.velocity.magnitude < minSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * minSpeed;
+        }
+
         //Lose
-        if(lives == 0)
+        if (lives == 0)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             foreach (GameObject g in loseObjectsActiveness)

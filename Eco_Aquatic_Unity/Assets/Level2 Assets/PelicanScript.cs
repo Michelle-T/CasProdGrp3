@@ -17,9 +17,9 @@ public class PelicanScript : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (other.gameObject.tag == "Ball")
         {
             ChangeTheDamnSprite();
         }
