@@ -62,6 +62,12 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Penguin");
     }
 
+    public void Beach()
+    {
+        Debug.Log("SceneName to load: Beach");
+        SceneManager.LoadScene("Beach");
+    }
+
     public void MainMenu()
     {
         Debug.Log("SceneName to load: MainMenu");

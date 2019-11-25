@@ -16,7 +16,7 @@ public class ShellScript : MonoBehaviour
         elapsedTime += Time.deltaTime;
         if(elapsedTime >= 5) 
         {
-            ChangeTheDamnSprite;
+            ChangeTheDamnSprite();
             elapsedTime = 0;
         }
     }

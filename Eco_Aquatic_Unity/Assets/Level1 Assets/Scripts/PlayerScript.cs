@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -56,7 +58,7 @@ public class PlayerScript : MonoBehaviour
         //var timeOut = false;
         timeLeft -= Time.deltaTime;
         int seconds = (int)(timeLeft % 60);
-        if (timeLeft < 0)
+        if (timeLeft <= 0)
         {
             scoring = false;
             foreach (GameObject g in endObjectsActiveness)
@@ -93,6 +95,7 @@ public class PlayerScript : MonoBehaviour
         if (scoring == false)
         {
             endScore = score;
+            GlobalScore.globalScore = endScore;
         }
     }
 }

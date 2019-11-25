@@ -1070,7 +1070,7 @@ MonoBehaviour:
   scoreTextEnd: {fileID: 439063686}
   endScore: 0
   timerText: {fileID: 1984062644}
-  timeLeft: 40
+  timeLeft: 15
   countdownTimer: 20
   endObjectsActiveness:
   - {fileID: 1970754891}
