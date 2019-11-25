@@ -56,6 +56,11 @@ public class Menu : MonoBehaviour
         Debug.Log("SceneName to load: Level 2");
         SceneManager.LoadScene("Level2");
     }
+    public void Penguin()
+    {
+        Debug.Log("SceneName to load: Penguin");
+        SceneManager.LoadScene("Penguin");
+    }
 
     public void MainMenu()
     {
