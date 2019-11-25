@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 51793407}
   - component: {fileID: 51793406}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RestartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 256216271}
   - component: {fileID: 256216270}
   m_Layer: 5
-  m_Name: Text
+  m_Name: UpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,7 +823,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421420401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.138, y: 5.6122, z: 24.582}
+  m_LocalPosition: {x: 21.56, y: 5.6122, z: 24.582}
   m_LocalScale: {x: -0.34091982, y: 0.34091982, z: 0.34091982}
   m_Children: []
   m_Father: {fileID: 0}
@@ -839,7 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602889115}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: SilverFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 693851808}
   - component: {fileID: 693851807}
   m_Layer: 5
-  m_Name: Text
+  m_Name: MainMenuText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 843257634}
   - component: {fileID: 843257633}
   m_Layer: 5
-  m_Name: Text
+  m_Name: DownText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1659,7 +1659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 24.608994, y: 11.399994}
+  m_AnchoredPosition: {x: 24.609009, y: 11.399963}
   m_SizeDelta: {x: 80, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963086093
@@ -2153,6 +2153,7 @@ GameObject:
   - component: {fileID: 1180409381}
   - component: {fileID: 1180409380}
   - component: {fileID: 1180409377}
+  - component: {fileID: 1180409382}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -2285,6 +2286,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1180409382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180409376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8302eda450706944eb87e738b898c18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubble: {fileID: 5561222943065176819, guid: e76a58b7d48627542a9d8b35c18028ba, type: 3}
+  scoreText: {fileID: 0}
+  score: 0
+  endScoreText: {fileID: 0}
+  scoreTextEnd: {fileID: 0}
+  endScore: 0
+  timerText: {fileID: 0}
+  timeLeft: 40
+  countdownTimer: 20
+  endObjectsActiveness:
+  - {fileID: 0}
 --- !u!1 &1247449193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,6 +2585,7 @@ GameObject:
   - component: {fileID: 1356823983}
   - component: {fileID: 1356823982}
   - component: {fileID: 1356823981}
+  - component: {fileID: 1356823985}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2710,6 +2735,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356823985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356823980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d70fa9bf3b18c046a191ea29736c15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish: {fileID: 602889114}
+  spawnTime: 2
 --- !u!1 &1362718784
 GameObject:
   m_ObjectHideFlags: 0
@@ -4127,7 +4166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -26.149002, y: 11.399994}
+  m_AnchoredPosition: {x: -26.148987, y: 11.399963}
   m_SizeDelta: {x: 80, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765596179
@@ -4329,7 +4368,7 @@ RectTransform:
   m_GameObject: {fileID: 1816147281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 410}
-  m_LocalScale: {x: 0.8517408, y: 0.8517408, z: 0.8517408}
+  m_LocalScale: {x: 1.0298005, y: 1.0298005, z: 1.0298005}
   m_Children:
   - {fileID: 739577262}
   - {fileID: 954204405}
@@ -4338,7 +4377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.181, y: 39.606995}
+  m_AnchoredPosition: {x: -12.181, y: 2}
   m_SizeDelta: {x: 200, y: 112.533325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1816147283
@@ -4480,7 +4519,7 @@ GameObject:
   - component: {fileID: 1949576860}
   - component: {fileID: 1949576859}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ResumeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4560,7 +4599,7 @@ GameObject:
   - component: {fileID: 2013360826}
   - component: {fileID: 2013360830}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: SilverFish
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

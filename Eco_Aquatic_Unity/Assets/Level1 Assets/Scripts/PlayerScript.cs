@@ -77,7 +77,7 @@ public class PlayerScript : MonoBehaviour
 
             if (countdownTimer < 0)
             {
-                SceneManager.LoadScene("Level2");
+                SceneManager.LoadScene("MainMenu");
             }
             timerText.text = "Time: " + seconds;
         }
