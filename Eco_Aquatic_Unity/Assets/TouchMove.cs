@@ -1,17 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
+﻿using UnityEngine;
 
-public class UIMove : MonoBehaviour
+public class TouchMove : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    private float moveSpeed;
+
     public GameObject[] waypoints;
     int current = 0;
     float rotSpeed;
     public float speed;
     float WPradius = 1;
-    float directionY;
-    Rigidbody2D rb;
+
 
     public int lives = 3;
 
@@ -24,17 +23,35 @@ public class UIMove : MonoBehaviour
 
     public GameObject soundfish;
     public GameObject soundtrash;
-
-    void Start()
+    // Start is called before the first frame update
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        moveSpeed = 10f;
     }
 
-    void Update()
+    // Update is called once per frame
+    private void Update()
     {
-        directionY = CrossPlatformInputManager.GetAxis("Vertical");
-        rb.velocity = new Vector2(0, directionY * 10);
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
 
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    if (touch.position.x < Screen.width / 2)
+                        rb.velocity = new Vector2(0f, -moveSpeed);
+
+                    if (touch.position.x > Screen.width / 2)
+                        rb.velocity = new Vector2(0f, moveSpeed);
+                    break;
+
+                case TouchPhase.Ended:
+                    rb.velocity = new Vector2(0f, 0f);
+                    break;
+            }
+        }
         if (Vector3.Distance(waypoints[current].transform.position, transform.position) < WPradius)
         {
             current++;

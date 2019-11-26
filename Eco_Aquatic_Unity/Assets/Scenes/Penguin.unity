@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 256216271}
   - component: {fileID: 256216270}
   m_Layer: 5
-  m_Name: UpText
+  m_Name: DownText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -705,10 +705,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: f01946789e5889441bd7ab80887c764f, type: 3}
-    m_FontSize: 28
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -716,7 +716,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Up
+  m_Text: Down
 --- !u!222 &256216271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 843257634}
   - component: {fileID: 843257633}
   m_Layer: 5
-  m_Name: DownText
+  m_Name: UpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1446,7 +1446,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Down
+  m_Text: Up
 --- !u!222 &843257634
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1918,7 +1918,7 @@ GameObject:
   - component: {fileID: 963086094}
   - component: {fileID: 963086093}
   m_Layer: 5
-  m_Name: ButtonDown
+  m_Name: ButtonUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2483,9 +2483,9 @@ GameObject:
   - component: {fileID: 1180409379}
   - component: {fileID: 1180409378}
   - component: {fileID: 1180409381}
-  - component: {fileID: 1180409380}
   - component: {fileID: 1180409382}
   - component: {fileID: 1180409377}
+  - component: {fileID: 1180409380}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -2590,7 +2590,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1180409376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4f9e2c3a81df6488a579b2936cfd49, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f292af5fb8dae845a9d7a140b5b6e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
@@ -4723,7 +4723,7 @@ GameObject:
   - component: {fileID: 1765596180}
   - component: {fileID: 1765596179}
   m_Layer: 5
-  m_Name: ButtonUp
+  m_Name: ButtonDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
