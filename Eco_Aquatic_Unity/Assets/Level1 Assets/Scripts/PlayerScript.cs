@@ -35,8 +35,6 @@ public class PlayerScript : MonoBehaviour
     //shooting
     void Update()
     {
-        
-
         if (Input.GetMouseButtonDown(0))
         {
             float timeSinceLastClick = Time.time - lastClickTime;
@@ -91,11 +89,11 @@ public class PlayerScript : MonoBehaviour
         if (scoring == true)
         {
             score += 1;
+            GlobalScore.globalScore += 1;
         }
         if (scoring == false)
         {
             endScore = score;
-            GlobalScore.globalScore = endScore;
         }
     }
 }
