@@ -19,7 +19,7 @@ public class SilverfishSpawn : MonoBehaviour
     }
     public void SpawnRandom()
     {
-        Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height - 60), Camera.main.farClipPlane / 2));
+        Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height - 70), Camera.main.farClipPlane / 2));
         Instantiate(fish, screenPosition, Quaternion.identity);
     }
 }
