@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishOneSpawn : MonoBehaviour
+public class SilverfishSpawn : MonoBehaviour
 {
     public GameObject fish;
     public float spawnTime = 2f;
@@ -19,7 +19,7 @@ public class FishOneSpawn : MonoBehaviour
     }
     public void SpawnRandom()
     {
-        Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, 0), Random.Range(0, Screen.height), Camera.main.farClipPlane / 2));
+        Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height), Camera.main.farClipPlane / 2));
         Instantiate(fish, screenPosition, Quaternion.identity);
     }
 }
