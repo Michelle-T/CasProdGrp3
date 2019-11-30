@@ -5,10 +5,12 @@ using UnityEngine;
 public class BuyOnClick : MonoBehaviour
 {
     public GameObject TrashPile;
+    public GameObject soundGood;
+    public GameObject soundBad;
 
     void OnMouseDown()
     {
-        Debug.Log("Stop that, it tickles!");
         Destroy(TrashPile.gameObject);
+        Instantiate(soundGood);
     }
 }
