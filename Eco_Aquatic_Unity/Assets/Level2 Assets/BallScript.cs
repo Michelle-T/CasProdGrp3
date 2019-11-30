@@ -106,6 +106,9 @@ public class BallScript : MonoBehaviour
         {
             audioData.PlayOneShot(impact, 0.7F);
         }
+
+        GlobalScore.globalScore += 1;
+        Debug.Log("Global go up");
     }
 
     //Reset Ball and Lose Life

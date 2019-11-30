@@ -76,22 +76,6 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    /*void OnGUI()
-    {
-        if (isPaused)
-            GUI.Label(new Rect(100, 100, 50, 30), "Game paused");
-    }
-
-    /*void OnApplicationFocus(bool hasFocus)
-    {
-        isPaused = !hasFocus;
-    }
-
-    public void OnApplicationPause(bool pauseStatus)
-    {
-        isPaused = pauseStatus;
-    }*/
-
     public void Pause()
     {
         if (Time.timeScale == 1)
@@ -110,7 +94,11 @@ public class Menu : MonoBehaviour
 
     public void Reload()
     {
-        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+        }
     }
 
     public void ShowPaused()
@@ -144,4 +132,20 @@ public class Menu : MonoBehaviour
             Unmute.SetActive(false);
         }
     }
+
+    /*void OnGUI()
+    {
+        if (isPaused)
+            GUI.Label(new Rect(100, 100, 50, 30), "Game paused");
+    }
+
+    /*void OnApplicationFocus(bool hasFocus)
+    {
+        isPaused = !hasFocus;
+    }
+
+    public void OnApplicationPause(bool pauseStatus)
+    {
+        isPaused = pauseStatus;
+    }*/
 }

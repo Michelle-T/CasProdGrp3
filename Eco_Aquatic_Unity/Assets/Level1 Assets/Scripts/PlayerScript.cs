@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
-
     public GameObject bubble;
 
     public Text scoreText;
@@ -27,9 +26,14 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject[] endObjectsActiveness;
 
+    private Rigidbody2D rb;
+
+    public bool click = true;
+
     void Start()
     {
         score = 0;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     //shooting
@@ -39,7 +43,7 @@ public class PlayerScript : MonoBehaviour
         {
             float timeSinceLastClick = Time.time - lastClickTime;
 
-            if (timeSinceLastClick <= doubleClickTime)
+            if (timeSinceLastClick <= doubleClickTime && click == true)
             {
                 Instantiate(bubble, transform.position, transform.rotation);
             }
@@ -58,6 +62,8 @@ public class PlayerScript : MonoBehaviour
         int seconds = (int)(timeLeft % 60);
         if (timeLeft <= 0)
         {
+            click = false;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             scoring = false;
             foreach (GameObject g in endObjectsActiveness)
             {

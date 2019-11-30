@@ -14,6 +14,11 @@ public class GlobalScore : MonoBehaviour
         
     }
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {
