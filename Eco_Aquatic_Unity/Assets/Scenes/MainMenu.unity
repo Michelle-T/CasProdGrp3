@@ -1364,7 +1364,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 819743563}
-        m_MethodName: Penguin
+        m_MethodName: OceanFact3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2101,7 +2101,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1546084670}
-        m_MethodName: Level1
+        m_MethodName: OceanFact1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2826,7 +2826,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2034149393}
-        m_MethodName: Level2
+        m_MethodName: OceanFact2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

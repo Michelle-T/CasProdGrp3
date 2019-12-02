@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 2ce5b28ba4828de41a06bc9c5e26c6da
+  - enabled: 1
+    path: Assets/Scenes/OceanFact/OceanFact1.unity
+    guid: 151eab3e5bccf7c4d888f09bc462d581
+  - enabled: 1
+    path: Assets/Scenes/OceanFact/OceanFact2.unity
+    guid: cf834d8e33e11b84ba461b18c52ac474
+  - enabled: 1
+    path: Assets/Scenes/OceanFact/OceanFact3.unity
+    guid: 50fb415841c8143439ae4290eba7e470
   m_configObjects: {}

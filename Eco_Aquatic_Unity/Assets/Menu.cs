@@ -67,6 +67,21 @@ public class Menu : MonoBehaviour
         Debug.Log("SceneName to load: Beach");
         SceneManager.LoadScene("Beach");
     }
+    public void OceanFact1()
+    {
+        Debug.Log("SceneName to load: OceanFact1");
+        SceneManager.LoadScene("OceanFact1");
+    }
+    public void OceanFact2()
+    {
+        Debug.Log("SceneName to load: OceanFact2");
+        SceneManager.LoadScene("OceanFact2");
+    }
+    public void OceanFact3()
+    {
+        Debug.Log("SceneName to load: OceanFact3");
+        SceneManager.LoadScene("OceanFact3");
+    }
     public void Credits()
     {
         Debug.Log("SceneName to load: Credits");
