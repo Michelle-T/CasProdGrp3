@@ -259,7 +259,8 @@ MonoBehaviour:
   TrashPile: {fileID: 1273675976}
   soundGood: {fileID: 1152856888240850007, guid: 97462b76031087b44ab2772261a7fa97,
     type: 3}
-  soundBad: {fileID: 0}
+  soundBad: {fileID: 7762872665451104324, guid: 520aed3afeaad854a9060d97e56ad246,
+    type: 3}
 --- !u!212 &24962349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1007,7 +1008,8 @@ MonoBehaviour:
   TrashPile: {fileID: 268272833}
   soundGood: {fileID: 1152856888240850007, guid: 97462b76031087b44ab2772261a7fa97,
     type: 3}
-  soundBad: {fileID: 0}
+  soundBad: {fileID: 7762872665451104324, guid: 520aed3afeaad854a9060d97e56ad246,
+    type: 3}
 --- !u!212 &576537383
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1249,7 +1251,8 @@ MonoBehaviour:
   TrashPile: {fileID: 719416608}
   soundGood: {fileID: 1152856888240850007, guid: 97462b76031087b44ab2772261a7fa97,
     type: 3}
-  soundBad: {fileID: 0}
+  soundBad: {fileID: 7762872665451104324, guid: 520aed3afeaad854a9060d97e56ad246,
+    type: 3}
 --- !u!1 &683138481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,7 +2614,8 @@ MonoBehaviour:
   TrashPile: {fileID: 709501693}
   soundGood: {fileID: 1152856888240850007, guid: 97462b76031087b44ab2772261a7fa97,
     type: 3}
-  soundBad: {fileID: 0}
+  soundBad: {fileID: 7762872665451104324, guid: 520aed3afeaad854a9060d97e56ad246,
+    type: 3}
 --- !u!212 &1569674307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2962,7 +2966,8 @@ MonoBehaviour:
   TrashPile: {fileID: 2071353024}
   soundGood: {fileID: 1152856888240850007, guid: 97462b76031087b44ab2772261a7fa97,
     type: 3}
-  soundBad: {fileID: 0}
+  soundBad: {fileID: 7762872665451104324, guid: 520aed3afeaad854a9060d97e56ad246,
+    type: 3}
 --- !u!212 &1663531585
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3770,7 +3775,8 @@ MonoBehaviour:
   TrashPile: {fileID: 618381812}
   soundGood: {fileID: 1152856888240850007, guid: 97462b76031087b44ab2772261a7fa97,
     type: 3}
-  soundBad: {fileID: 0}
+  soundBad: {fileID: 7762872665451104324, guid: 520aed3afeaad854a9060d97e56ad246,
+    type: 3}
 --- !u!212 &1912433665
 SpriteRenderer:
   m_ObjectHideFlags: 0

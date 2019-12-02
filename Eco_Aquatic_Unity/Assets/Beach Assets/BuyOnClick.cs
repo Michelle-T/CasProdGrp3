@@ -16,5 +16,9 @@ public class BuyOnClick : MonoBehaviour
             Destroy(TrashPile.gameObject);
             Instantiate(soundGood);
         }
+        else
+        {
+            Instantiate(soundBad);
+        }
     }
 }
