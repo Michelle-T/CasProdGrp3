@@ -28,6 +28,7 @@ public class TouchMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 10f;
+        Flip();
     }
 
     // Update is called once per frame
@@ -60,6 +61,11 @@ public class TouchMove : MonoBehaviour
                 current = 0;
                 Flip();
             }
+            if (current == 1)
+            {
+                Flip();
+            }
+
         }
         transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
 
