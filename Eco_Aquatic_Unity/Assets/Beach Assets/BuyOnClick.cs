@@ -10,7 +10,11 @@ public class BuyOnClick : MonoBehaviour
 
     void OnMouseDown()
     {
-        Destroy(TrashPile.gameObject);
-        Instantiate(soundGood);
+        if (GlobalScore.globalScore >= 10)
+        {
+            GlobalScore.globalScore -= 10;
+            Destroy(TrashPile.gameObject);
+            Instantiate(soundGood);
+        }
     }
 }

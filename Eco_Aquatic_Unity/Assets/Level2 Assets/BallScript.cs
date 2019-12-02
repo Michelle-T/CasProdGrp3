@@ -100,6 +100,7 @@ public class BallScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             audioData.PlayOneShot(impact, 0.7F);
+            GlobalScore.globalScore += 1;
         }
 
         if (collision.gameObject.tag == "Fish") //Pelican is tagged fish ¯\_(ツ)_/¯
@@ -107,7 +108,6 @@ public class BallScript : MonoBehaviour
             audioData.PlayOneShot(impact, 0.7F);
         }
 
-        GlobalScore.globalScore += 1;
         Debug.Log("Global go up");
     }
 
